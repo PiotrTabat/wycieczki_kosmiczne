@@ -1,0 +1,38 @@
+.space-tour-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.space-tour-details-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.space-tour-details-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.space-tour-details-price {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.space-tour-details-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.space-tour-details-itinerary-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.space-tour-details-itinerary {
+    font-size: 16px;
+}
