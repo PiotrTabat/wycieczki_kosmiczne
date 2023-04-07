@@ -12,8 +12,6 @@ import {Provider} from 'react-redux';
 import store from './store/store';
 
 
-
-
 function App() {
     return (
         <Provider store={store}>
@@ -23,9 +21,9 @@ function App() {
                         <Header/>
                         <Routes>
                             <Route path="/" element={<Home/>}/>
-                            <Route path="/cart" element={ShoppingCartPage}/>
+                            <Route path="/shopping-cart" element={<ShoppingCartPage/>}/>
                             <Route path="/checkout" element={<Checkout/>}/>
-                            <Route path="/confirmation" element={Confirmation}/>
+                            <Route path="/confirmation" element={<Confirmation/>}/>
                             <Route path="/tour/:id" element={<SpaceTourDetails/>}/>
                             <Route path="/cart" element={<ShoppingCart/>}/>
                         </Routes>

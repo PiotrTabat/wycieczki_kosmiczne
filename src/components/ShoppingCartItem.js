@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ShoppingCartItem = ({ item }) => {
     return (
         <div className="shopping-cart-item">

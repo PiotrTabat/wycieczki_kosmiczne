@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-const apiKey = '1gujLAlRlQib2qxyWsmzCgq9QxdUpo5yRqwfTKNG';
 
 export const FETCH_TOURS_REQUEST = 'FETCH_TOURS_REQUEST';
 export const FETCH_TOURS_SUCCESS = 'FETCH_TOURS_SUCCESS';
@@ -22,10 +21,7 @@ export const fetchTours = () => {
     return async (dispatch) => {
         dispatch(fetchToursRequest());
         try {
-            const response = await axios.get('https://api.nasa.gov/planetary', {
-                params: {
-                    api_key: apiKey
-                }
+            const response = await axios.get('', {
             });
 
 

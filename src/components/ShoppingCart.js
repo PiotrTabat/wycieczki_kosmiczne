@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import {useContext} from 'react';
+import {CartContext} from '../context/CartContext';
 import './ShoppingCart.css';
-import { CartContext } from '../context/CartContext';
+
 
 const ShoppingCart = () => {
-    const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
+    const {cartItems, removeFromCart, getTotalPrice, clearCart} = useContext(CartContext);
+
+    const handleOrderClick = () => {
+        clearCart();
+        alert('Dziękujemy za zamówienie!');
+    };
 
     if (cartItems.length === 0) {
         return (
@@ -21,6 +27,7 @@ const ShoppingCart = () => {
                     <li key={item.id} className="shopping-cart-item">
                         <span className="shopping-cart-item-title">{item.title}</span>
                         <span className="shopping-cart-item-price">{item.price} PLN</span>
+                        <span className="shopping-cart-item-quantity">{item.quantity}</span>
                         <button className="shopping-cart-item-remove" onClick={() => removeFromCart(item.id)}>
                             Usuń
                         </button>
@@ -29,8 +36,9 @@ const ShoppingCart = () => {
             </ul>
             <div className="shopping-cart-summary">
                 <p>Łączna kwota: {getTotalPrice()} PLN</p>
-                <button className="shopping-cart-checkout">Zamów</button>
+                <button className="shopping-cart-checkout" onClick={handleOrderClick}>Zamów</button>
             </div>
+
         </div>
     );
 };

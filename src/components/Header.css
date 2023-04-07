@@ -1,14 +1,14 @@
 .header {
-    background-color: #1f1f1f;
-    padding: 1rem 2rem;
+    background-color: black;
+    padding: 0.5rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .TBATLogo {
-    width: 100px;
-    height: 100px;
+    width: 7rem;
+    height: 7rem;
 }
 
 .header nav ul {
@@ -23,12 +23,28 @@
 }
 
 .header nav ul li a {
-    font-size: 2.5rem;
-    color: #cb1515;
+    font-size: 2rem;
     text-decoration: none;
+    color: #cb1515;
+    transition: color 0.2s;
 }
 
 .header nav ul li a:hover {
-    color: #ccc;
+    color: #949393;
 }
 
+.header nav ul li a:active {
+    color: #750202;
+}
+
+nav ul li:last-child a {
+    color: white;
+}
+
+nav ul li:nth-child(1) a {
+    color: orange;
+}
+
+nav ul li:nth-child(2) a {
+    color: blue;
+}

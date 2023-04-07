@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React, {useState, useContext} from 'react';
+import {CartContext} from '../context/CartContext';
 import './Checkout.css';
 
 const Checkout = () => {
-    const { cartItems, getTotalPrice } = useContext(CartContext);
+    const {cartItems, getTotalPrice} = useContext(CartContext);
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -16,13 +16,12 @@ const Checkout = () => {
     });
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData({ ...formData, [name]: value });
+        const {name, value} = event.target;
+        setFormData({...formData, [name]: value});
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Przesyłanie danych zamówienia do serwera
         console.log(formData);
     };
 

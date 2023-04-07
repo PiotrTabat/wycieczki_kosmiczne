@@ -1,8 +1,15 @@
 .space-tour-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    padding: 0;
+    grid-gap: 3rem;
+    padding: 3rem;
     margin: 0;
     list-style-type: none;
+    color: white;
+    background: url("https://tapetax.pl/pic/product_foto/proda25877pi.jpg");
+    background-size: cover;
+}
+.space-tour-list .description {
+    color: #ffffff;
+    padding: 0.5rem 0.5rem;
 }
